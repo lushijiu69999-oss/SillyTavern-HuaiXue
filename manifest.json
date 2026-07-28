@@ -1,0 +1,9 @@
+{
+    "display_name": "TTRPG D100 骰子池",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "author": "Your Name",
+    "description": "为 TTRPG 跑团设计的暗骰池插件。在每轮对话开始时生成固定骰子序列并注入 Prompt，在用户使用 Swipe（重新生成）时保持该序列数值不变。"
+}
