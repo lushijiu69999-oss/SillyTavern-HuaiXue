@@ -131,13 +131,13 @@ function syncDicePool() {
 
         const injectionText = formatPromptText(dicePool);
         
-        // 提前注入 Prompt
-        context.setExtensionPrompt(
-            EXTENSION_NAME,
-            injectionText,
-            extension_prompt_types.IN_PROMPT,
-            0 
-        );
+// 修正后的注入方式
+context.setExtensionPrompt(
+    EXTENSION_NAME,
+    injectionText,
+    extension_prompt_types.IN_CHAT, // [修改] 注入到对话流中，伪装成 System 消息
+    1                               // [修改] 深度 1 或 0（通常 1 代表在最新一条用户消息之前，0 代表最末尾）
+);
     } catch (error) {
         console.error(`[${EXTENSION_NAME}] 同步骰子池失败:`, error);
     }
