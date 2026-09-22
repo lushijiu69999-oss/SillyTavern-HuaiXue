@@ -1,6 +1,7 @@
 {
     "display_name": "TTRPG D100 骰子池",
     "loading_order": 100,
+    "version": "1.0.0",
     "requires": [],
     "optional": [],
     "js": "index.js",
